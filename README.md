@@ -11,7 +11,7 @@ To execute the project you need to have in the directory the two files present i
   
 IMPORTANT: change the path within the file "deliverable1.pbs" by setting the correct one where these two files are located
 
-To run "deliverable1.pbs", use the following command:
+To run deliverable1.pbs, use the following command:
 ```bash
 qsub deliverable1.pbs
 ```
