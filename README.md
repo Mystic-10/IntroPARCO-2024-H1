@@ -17,7 +17,7 @@ qsub deliverable1.pbs
 ```
 Within this file there are several controls (in case of error displayed in the file "deliverable1.o"):
 - "delivereble1.c" is not found in the same directory
-- "delivereble1" is not created after compiling "deliverable1.c" due to errors reported in the "deliverable1.e" (created in the same directory by "deliverable1.pbs")
+- "delivereble1" is not created after compiling "deliverable1.c" due to errors reported in the "deliverable1.e"
 
 Also, within the "deliverable1.pbs" file, each time it is run, it is specified that the files "deliverable1_omp.csv" and "deliverable1_imp_seq.csv" created within the "deliverable1.c" are deleted being they in append for need.
 
