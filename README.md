@@ -9,27 +9,27 @@ To execute the project you need to have in the directory the two files present i
 - deliverable1.pbs
 - deliverable1.c
   
-IMPORTANT: change the path within the file "deliverable1.pbs" by setting the correct one where these two files are located
+IMPORTANT: change the path within the file ```deliverable1.pbs``` by setting the correct one where these two files are located
 
 To run deliverable1.pbs, use the following command:
 ```bash
 qsub deliverable1.pbs
 ```
-Within this file there are several controls (in case of error displayed in the file "deliverable1.o"):
-- "delivereble1.c" is not found in the same directory
-- "delivereble1" is not created after compiling "deliverable1.c" due to errors reported in the "deliverable1.e"
+Within this file there are several controls (in case of error displayed in the file ```deliverable1.o```):
+- ```delivereble1.c``` is not found in the same directory
+- ```delivereble1``` is not created after compiling ```deliverable1.c``` due to errors reported in the ```deliverable1.e```
 
-Also, within the "deliverable1.pbs" file, each time it is run, it is specified that the files "deliverable1_omp.csv" and "deliverable1_imp_seq.csv" created within the "deliverable1.c" are deleted being they in append for need.
+Also, within the ```deliverable1.pbs``` file, each time it is run, it is specified that the files ```deliverable1_omp.csv``` and ```deliverable1_imp_seq.csv``` created within the ```deliverable1.c``` are deleted being they in append for need.
 
 ## Running the program individually
-Compile the file "deliverable1.c" with this command:
+Compile the file ```deliverable1.c``` with this command:
 
 ```bash
 gcc -o deliverable1 deliverable1.c -fopenmp
 ```
 
 This will create an executable named ```deliverable1```.
-Now, you can use this command by replacing "size" with the size of the matrix:
+Now, you can use this command by replacing ```size``` with the size of the matrix:
 
 ```bash
 ./deliverable1 size
