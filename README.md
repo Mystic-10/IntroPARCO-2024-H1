@@ -4,7 +4,7 @@
 - **gcc** 9.1.0 version
 - **omp.h** (and a compiler that supports OpenMP)
 
-## Running the program with ```deliverable1.pbs``` file
+## Running the program with ```deliverable1.pbs```
 To execute the project you need to have in the directory the two files present in this repository:
 - deliverable1.pbs
 - deliverable1.c
