@@ -51,30 +51,45 @@ CHECK SYMMETRIC (implicit): NO
 CHECK SYMMETRIC (omp): NO
 
 -->WALL CLOCK TIME SYMMETRICAL CHECK:
-	wall clock time SYMMETRICAL check (sequential) =      0.05936 sec
-	wall clock time SYMMETRICAL check (implicit) =        0.05771 sec
-	wall clock time SYMMETRICAL check (omp) =             0.04013 sec
+        -SEQUENTIAL: wall clock time SYMMETRICAL check =      0.04416 sec
+        -IMPLICIT: wall clock time SYMMETRICAL check =        0.04114 sec
+        -OMP: wall clock time SYMMETRICAL check:
+
+         N THREADS  |     AVG TIME
+                  1 |  0.04967 sec
+                  2 |  0.04151 sec
+                  4 |  0.02301 sec
+                  8 |  0.01631 sec
+                 16 |  0.01021 sec
+                 32 |  0.007373 sec
+                 64 |  0.002785 sec
 
 -->STATS MATRICES TRANSPOSITION:
-	-SEQUENTIAL:
-	 average wall clock time TRANSPOSED MATRIX: 0.129468390 sec
-	 effective BANDWIDTH: 1.037 GB/s
+        -SEQUENTIAL:
+         average wall clock time TRANSPOSED MATRIX: 0.146035025 sec
+         effective BANDWIDTH: 0.919 GB/s
 
-	-IMPLICIT:
-	 average wall clock time TRANSPOSED MATRIX: 0.097037317 sec
-	 effective BANDWIDTH: 1.383 GB/s
+        -IMPLICIT:
+         average wall clock time TRANSPOSED MATRIX: 0.116103744 sec
+         effective BANDWIDTH: 1.156 GB/s
 
-	-OMP:
-	 average wall clock time, speed up and efficiency TRANSPOSED MATRIX per threads:
+        -OMP:
+         average wall clock time, speed up and efficiency TRANSPOSED MATRIX per threads:
 
-	 N THREADS  |     AVG TIME     |  SPEED UP  |  EFFICIENCY  |   BANDWIDTH
-	          1 |  0.088833956 sec |       1.46 |      145.74% | 1.511
-	          2 |  0.068224338 sec |       1.90 |       94.88% | 1.967
-	          4 |  0.036467781 sec |       3.55 |       88.76% | 3.680
-	          8 |  0.022005448 sec |       5.88 |       73.54% | 6.099
-	         16 |  0.014156166 sec |       9.15 |       57.16% | 9.481
-	         32 |  0.010073677 sec |      12.85 |       40.16% | 13.324
-	         64 |  0.009200799 sec |      14.07 |       21.99% | 14.588
+         N THREADS  |     AVG TIME     |  SPEED UP  |  EFFICIENCY  |   BANDWIDTH
+                  1 |  0.112915087 sec |       1.29 |      129.33% | 1.189
+                  2 |  0.071479276 sec |       2.04 |      102.15% | 1.878
+                  4 |  0.039301236 sec |       3.72 |       92.89% | 3.415
+                  8 |  0.023619071 sec |       6.18 |       77.29% | 5.683
+                 16 |  0.015217980 sec |       9.60 |       59.98% | 8.820
+                 32 |  0.010164032 sec |      14.37 |       44.90% | 13.205
+                 64 |  0.008088565 sec |      18.05 |       28.21% | 16.594
+
+Example to test the function: main matrix compared to transposed matrix (must be NOT EQUAL)
+-->CHECK EQUAL: NO
+
+Example to test the function: transposed matrix sequential compared to transposed matrix implicit (muste be EQUAL)
+-->CHECK EQUAL: SI
 
 All matrices DEALLOCATED
 
