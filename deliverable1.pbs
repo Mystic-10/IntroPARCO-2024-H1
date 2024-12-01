@@ -1,0 +1,86 @@
+#!/bin/bash
+# Job name
+#PBS -N deliverable1
+# Output files
+#PBS -o ./deliverable1.o
+#PBS -e ./deliverable1.e
+# Queue name
+#PBS -q short_cpuQ
+# Set the maximum wall time
+#PBS -l walltime=0:10:00
+# Number of nodes, cpus, mpi processors and amount of memory
+#PBS -l select=1:ncpus=64:ompthreads=64:mem=1gb
+
+# Modules for C
+module load gcc91
+gcc() {
+    gcc-9.1.0 "$@"
+}
+gcc --version
+# Select the working directory
+cd /home/nicolo.belle/test
+
+echo "------------------------------- START deliverable1.pbs -------------------------------"
+
+# File
+FILEC="deliverable1.c"
+
+# Check if file exists
+if [ -f "$FILEC" ]; then
+    echo "deliverable1.c founded.."
+    # Remove compiled file created during previous runs
+    FILE="deliverable1"
+    if [ -f "$FILE" ]; then
+        echo "deliverable1 of previous execution removed.."
+        rm deliverable1
+    fi
+
+    # Remove csv file created during previous runs
+    FILESICSV="deliverable1_imp_seq.csv"
+    if [ -f "$FILESICSV" ]; then
+        echo "deliverable1_imp_seq.csv of previous execution removed.."
+        rm deliverable1_imp_seq.csv
+    fi
+
+    # Remove csv file created during previous runs
+    FILECSV="deliverable1_omp.csv"
+    if [ -f "$FILECSV" ]; then
+        echo "deliverable1_omp.csv of previous execution removed.."
+        rm deliverable1_omp.csv
+    fi
+
+    # Compile code
+    gcc -o deliverable1 deliverable1.c -fopenmp -O2
+
+    echo "deliverable1.c compiled.."
+    
+    if [ -f "$FILE" ]; then
+        echo "deliverable1 created.."
+        echo "Execution started.."
+        echo ""
+        # Run code
+        ./deliverable1 16
+        ./deliverable1 32
+        ./deliverable1 64
+        ./deliverable1 128
+        ./deliverable1 256
+        ./deliverable1 512
+        ./deliverable1 1024
+        ./deliverable1 2048
+        ./deliverable1 4096
+        echo ""
+        echo "Execution ended.."
+    else
+        echo ""
+        echo "executable file 'deliverable1' not created, check file 'deliverable1.e' for the error.."
+    fi
+else
+    echo ""
+    echo "ERROR: file deliverable1.c does not exist"
+fi
+
+
+echo "-------------------------------  END deliverable1.pbs  -------------------------------"
+
+
+
