@@ -1,5 +1,7 @@
 # IntroPARCO-2024-H1
 
+unitn mail: nicolo.belle@studenti.unitn.it - ID: 238178
+
 ### Tools and Libraries
 - **gcc** 9.1.0 version
 - **omp.h** (and a compiler that supports OpenMP)
