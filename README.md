@@ -5,7 +5,7 @@
 - **omp.h** (and a compiler that supports OpenMP)
 
 ## Running the program with ```deliverable1.pbs```
-To execute the project you need to have in the directory the two files present in this repository:
+To execute the project you need to have in the directory these two files that you can find in this repository:
 - `deliverable1.pbs`
 - `deliverable1.c`
   
