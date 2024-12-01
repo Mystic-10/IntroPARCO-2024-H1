@@ -28,16 +28,14 @@ To change the size of the matrix you can modify the first parameter of the follo
 
 ## Running the program individually
 Compile the file ```deliverable1.c``` with this command:
-
 ```bash
-gcc -o deliverable1 deliverable1.c -fopenmp
+gcc -o deliverable1 deliverable1.c -fopenmp -O2
 ```
 
 This will create an executable named ```deliverable1```.
-Now, you can use this command by replacing ```size``` with the size of the matrix:
-
+Now, you can use the following command by replacing ```size``` with the size of the matrix:
 ```bash
-./deliverable1 size
+./deliverable1 size     # Replace size
 ```
 
 ## Example of output 
