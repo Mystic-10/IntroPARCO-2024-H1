@@ -85,12 +85,6 @@ CHECK SYMMETRIC (omp): NO
                  32 |  0.010164032 sec |      14.37 |       44.90% | 13.205
                  64 |  0.008088565 sec |      18.05 |       28.21% | 16.594
 
-Example to test the function: main matrix compared to transposed matrix (must be NOT EQUAL)
--->CHECK EQUAL: NO
-
-Example to test the function: transposed matrix sequential compared to transposed matrix implicit (muste be EQUAL)
--->CHECK EQUAL: SI
-
 All matrices DEALLOCATED
 
 ```
