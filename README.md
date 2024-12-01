@@ -6,8 +6,8 @@
 
 ## Running the program with ```deliverable1.pbs```
 To execute the project you need to have in the directory the two files present in this repository:
-- deliverable1.pbs
-- deliverable1.c
+- [deliverable1.pbs](#deliverable1.pbs)
+- [deliverable1.c](deliverable1.c)
   
 IMPORTANT: change the path within the file ```deliverable1.pbs``` by setting the correct one where these two files are located
 
