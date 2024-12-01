@@ -35,9 +35,16 @@ gcc -o deliverable1 deliverable1.c -fopenmp -O2
 ```
 
 This will create an executable named ```deliverable1```.
+
 Now, you can use the following command by replacing ```size``` with the size of the matrix:
 ```bash
 ./deliverable1 size     # Replace size
+```
+
+IMPORTANT: remember to remove ```deliverable1_omp.csv``` and ```deliverable1_imp_seq.csv``` becouse they are opened in append.
+You can do this by using this command:
+```bash
+rm deliverable1_omp.csv deliverable1_imp_seq.csv
 ```
 
 ## Example of output 
