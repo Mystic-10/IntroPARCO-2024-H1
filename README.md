@@ -21,6 +21,11 @@ Within this file there are several controls (in case of error will be displayed 
 
 Also, within the ```deliverable1.pbs``` file, it is specified that the files ```deliverable1_omp.csv``` and ```deliverable1_imp_seq.csv``` created on the ```deliverable1.c``` are deleted at each execution, being they in append for need.
 
+To change the size of the matrix you can modify the first parameter of the following command within the file `delivereble1.pbs`:
+```bash
+./deliverable1 size     # Replace size
+```
+
 ## Running the program individually
 Compile the file ```deliverable1.c``` with this command:
 
