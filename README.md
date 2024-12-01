@@ -15,7 +15,7 @@ To run deliverable1.pbs, use the following command:
 ```bash
 qsub deliverable1.pbs
 ```
-Within this file there are several controls (in case of error displayed in the file ```deliverable1.o```):
+Within this file there are several controls (in case of error will be displayed the motivation in the file ```deliverable1.o```):
 - ```delivereble1.c``` is not found in the same directory
 - ```delivereble1``` is not created after compiling ```deliverable1.c``` due to errors reported in the ```deliverable1.e```
 
