@@ -27,6 +27,8 @@ To change the size of the matrix you can modify the first parameter of the follo
 ```
 
 ## Running the program individually
+You need to have ```deliverable1.c``` in the directory.
+
 Compile the file ```deliverable1.c``` with this command:
 ```bash
 gcc -o deliverable1 deliverable1.c -fopenmp -O2
